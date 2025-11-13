@@ -1,58 +1,113 @@
-# 🎧 Accent / Language Identification App
+🎧 Indian Accent / Language Identification App
 
-This project is a **Machine Learning & Audio Processing Web Application** that identifies the **accent or native language** of a speaker from a short voice sample.  
-It also provides a **fun cuisine recommendation** based on the detected accent!
+A Streamlit-based web application that identifies Indian accents/languages from voice input using MFCC features and a machine-learning model.
+Users can upload a WAV file or record their own voice, and the system predicts the accent with confidence scores.
 
----
+⭐ Features
+🔊 Voice Input Options
 
-## 🌍 Project Overview
+📁 Upload a .wav audio file
 
-This app analyzes an audio file (or recorded voice) using **MFCC features** and a trained **Random Forest classifier** to detect the spoken accent/language.  
-It’s built using **Streamlit** for the UI and supports both file upload and real-time microphone recording.
+🎤 Record voice directly from the browser
 
----
+🤖 Machine Learning
 
-## 🧠 Features
+MFCC feature extraction using Librosa
 
-✅ Upload or record `.wav` audio files  
-✅ Predict the accent/language using an ML model  
-✅ Shows confidence percentage  
-✅ Recommends cuisines based on the detected accent  
-✅ Beautiful gradient UI with Material-style cards  
+Classification using a trained Random Forest model
 
----
+Scaler & Label Encoder included for accurate predictions
 
-## 🧩 Technologies Used
+🍽️ Bonus Feature:
 
-| Component | Description |
-|------------|-------------|
-| **Frontend** | Streamlit (Python-based Web UI) |
-| **Audio Processing** | Librosa, SoundFile |
-| **Machine Learning** | Scikit-learn (Random Forest Classifier) |
-| **Data Handling** | Pandas, NumPy |
-| **Deployment** | Streamlit Cloud |
+Accent-based Indian Cuisine Recommendations 😋
 
----
+🎨 Beautiful UI
 
-## 🗂️ Dataset
+Lavender-themed glowing background ✨
 
-We used the **IndicAccentDB** dataset — a multilingual Indian English speech database.  
-Each audio file corresponds to one accent/language label such as:
+Glassmorphism components
 
-| Label | Example Language |
-|--------|------------------|
-| English | Neutral |
-| Hindi | North Indian Accent |
-| Tamil | South Indian Accent |
-| Telugu | South Indian Accent |
-| Kannada | South Indian Accent |
-| Malayalam | South Indian Accent |
-| Bengali | East Indian Accent |
-| Gujarati | West Indian Accent |
-| Marathi | Central Indian Accent |
-| Punjabi | North Indian Accent |
+Smooth buttons and animated card effects
 
----
+🏗️ Project Structure
+📁 accent-language-identification
+ ┣ 📄 app.py
+ ┣ 📄 requirements.txt
+ ┣ 📄 rf_mfcc_model.joblib
+ ┣ 📄 scaler.joblib
+ ┣ 📄 label_encoder.joblib
+ ┗ 📄 README.md
 
-## 🧾 Files in This Repository
+🚀 How to Run Locally
+1️⃣ Create & Activate Virtual Environment
+python -m venv .venv
+.\.venv\Scripts\activate   # On Windows
 
+2️⃣ Install Dependencies
+pip install -r requirements.txt
+
+3️⃣ Run the Streamlit App
+streamlit run app.py
+
+🌐 Deploy on Streamlit Cloud
+
+You can deploy easily by uploading these files:
+
+✔ app.py
+✔ requirements.txt
+✔ rf_mfcc_model.joblib
+✔ scaler.joblib
+✔ label_encoder.joblib
+
+Steps:
+
+Go to https://share.streamlit.io/
+
+Click New App
+
+Select your GitHub repo
+
+Choose main branch
+
+Set app.py as the entrypoint
+
+Deploy 🎉
+
+🧠 Model Details
+
+Features: 13 MFCC coefficients
+
+Preprocessing: Mean aggregation
+
+Classifier: Random Forest
+
+Trained on: Indian Accent Dataset
+
+📦 Requirements
+
+All dependencies are listed inside requirements.txt.
+Key libraries:
+
+streamlit
+
+numpy
+
+librosa
+
+soundfile
+
+joblib
+
+sounddevice
+
+pandas
+
+👨‍💻 Developer
+
+Aditya Nadipalli
+
+
+📫 Contact
+
+For improvements, bugs, or contributions, feel free to open issues or pull requests.
