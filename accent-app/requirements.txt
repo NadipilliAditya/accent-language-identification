@@ -1,0 +1,9 @@
+streamlit
+librosa
+soundfile
+joblib
+matplotlib
+pandas
+numpy
+git+https://github.com/stefanrmmr/streamlit_audio_recorder.git
+scikit-learn
